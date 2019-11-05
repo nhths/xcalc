@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:paddingStart="10dp"
+        android:text="введите уравнение:"/>
+
+    <HorizontalScrollView
+        android:id="@+id/scroll_formula_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end">
+
+            <TextView
+                android:id="@+id/formulacontainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="50sp"
+                android:gravity="end"
+                android:layout_gravity="end"
+                android:layout_marginRight="26dp"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:paddingStart="10dp"
+        android:text="ответ:"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:text="X="
+            android:gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="2dp"/>
+
+        <HorizontalScrollView
+            android:id="@+id/scroll_answer_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/answer_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="50sp"
+                    android:gravity="end"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shrinkColumns="*"
+            android:stretchColumns="*"
+            android:layout_weight="7">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/one"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    style="@style/ButtonStyle"/>
+
+                <Button
+                    android:id="@+id/two"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="2"
+                    style="@style/ButtonStyle"/>
+
+                <Button
+                    android:id="@+id/three"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="3"
+                    style="@style/ButtonStyle"/>
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/four"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="4"
+                    style="@style/ButtonStyle"/>
+
+                <Button
+                    android:id="@+id/five"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="5"
+                    style="@style/ButtonStyle"/>
+
+                <Button
+                    android:id="@+id/six"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="6"
+                    style="@style/ButtonStyle"/>
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="7"
+                    style="@style/ButtonStyle"/>
+
+                <Button
+                    android:id="@+id/eight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="8"
+                    style="@style/ButtonStyle"/>
+
+                <Button
+                    android:id="@+id/nine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="9"
+                    style="@style/ButtonStyle"/>
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/dot"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/dot"
+                    style="@style/ButtonStyle"/>
+
+                <Button
+                    android:id="@+id/onenull"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    style="@style/ButtonStyle"/>
+
+                <Button
+                    android:id="@+id/del"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="c"
+                    style="@style/ButtonStyle"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/ex"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/ex"
+                android:layout_weight="1"
+                style="@style/ButtonStyle"
+                android:layout_marginBottom="1dp"/>
+
+            <Button
+                android:id="@+id/plus"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/plus"
+                android:layout_weight="1"
+                style="@style/ButtonStyle"
+                android:layout_marginBottom="1dp"/>
+
+            <Button
+                android:id="@+id/minus"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/minus"
+                android:layout_weight="1"
+                style="@style/ButtonStyle"
+                android:layout_marginBottom="1dp"/>
+
+            <Button
+                android:id="@+id/equal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/equal"
+                android:layout_weight="1"
+                style="@style/ButtonStyle"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
