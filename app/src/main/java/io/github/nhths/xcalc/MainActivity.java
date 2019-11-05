@@ -354,6 +354,7 @@ class XValueFinder{
 
     private boolean before_equal = true; // "after = before"
     private boolean x_exist = false; //for 3x and other
+    private boolean is_x_values_exist = false;
     private String temp = "";
 
     public String findX(String formula){
@@ -363,6 +364,11 @@ class XValueFinder{
         }
 
         getNumbsSum(formula);
+
+        if(!is_x_values_exist){
+            setNullNumbs();
+            return "добавьте х";
+        }
 
         answer = numbs_sum/x_coefficent_sum;
 
@@ -393,6 +399,7 @@ class XValueFinder{
             if (char_temp_arr[i] == 'x'){
                 System.out.println("x существует");
                 x_exist = true;
+                is_x_values_exist = true;
                 continue;
             }
 
@@ -447,6 +454,10 @@ class XValueFinder{
         x_coefficent_sum = 0;
         numbs_sum = 0;
         answer = 0;
+        before_equal = true;
+        x_exist = false;
+        is_x_values_exist = false;
+        String temp = "";
         return answer_temp;
     }
 
