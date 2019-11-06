@@ -390,7 +390,7 @@ class XValueFinder{
             System.out.println(i + ") be " + before_equal + " =====  x exist " + x_exist + " ===== temp " + temp);
 
             if(char_temp_arr[i] == '='){
-                System.out.println("до равно");
+                System.out.println("до равно применилось");
                 addToSum(char_temp_arr[i],i);
                 before_equal = false;
                 continue;
@@ -400,7 +400,6 @@ class XValueFinder{
                 System.out.println("x существует");
                 x_exist = true;
                 is_x_values_exist = true;
-                continue;
             }
 
             if(char_temp_arr[i] != '='){
@@ -419,6 +418,18 @@ class XValueFinder{
 
     private void addToSum(char char_temp, int iteration){
         if(char_temp == '+' || char_temp == '-' || char_temp == '=' || iteration == 0){
+
+            if (x_exist) {
+
+                if (temp.equals("x+") || temp.equals("x")) {
+                    temp = "1";
+                    System.out.println("у нас 1х");
+                } else if (temp.equals("x-")) {
+                    temp = "1-";
+                }
+            }
+
+            System.out.println("добавляем число " + temp);
 
             if(temp != "" && !temp.equals("-") && !temp.equals("+")){
 
@@ -466,7 +477,9 @@ class XValueFinder{
         char[] temp_char_array = temp.toCharArray();
 
         for (int i = temp_char_array.length-1; i >= 0; i--) {
-            reverse_temp+=temp_char_array[i];
+            if (temp_char_array[i] != 'x'){
+                reverse_temp+=temp_char_array[i];
+            }
             System.out.println("символ " + temp_char_array[i] + " отправился к " + reverse_temp);
         }
 
